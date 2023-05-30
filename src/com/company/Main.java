@@ -14,7 +14,7 @@ public class Main {
         Pattern pattern = Pattern.compile("(((\\d|\\d\\d|1\\d\\d|2[0-4]\\d|25[0-5])\\.){3})(25[0-5]|2[0-4]\\d|1\\d\\d|\\d\\d|\\d)");
         Matcher matcher = pattern.matcher(input);
         if (matcher.find()) {
-            try (BufferedWriter bw = new BufferedWriter(new FileWriter("ip-addresses.txt"))) {
+            try (BufferedWriter bw = new BufferedWriter(new FileWriter("ip.txt"))) {
                 bw.write(matcher.group());
             } catch (IOException e) {
                 System.out.println("Ошибка");
