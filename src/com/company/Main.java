@@ -16,7 +16,7 @@ public class Main {
         if (matcher.find()) {
             try (BufferedWriter bw = new BufferedWriter(new FileWriter("ip.txt"))) {
                 bw.write(matcher.group());
-            } catch (IOException e) {
+            } catch (IOException ex) {
                 System.out.println("Ошибка");
             }
         } else {
